@@ -63,7 +63,7 @@
 # files that were 'given to' this script. The variable "$@" will be very useful
 # for this. Let's take a look at what it gives us:
 
-echo "$@"
+#echo "$@"
 
 # How are you going to work with each file path?
 # HINT: for loop (remember "for do done"?)
@@ -94,4 +94,16 @@ echo "$@"
 #
 # ADD YOUR CODE BELOW:
 
-$PATH = $@
+total=0
+
+for file in "$@"
+do
+
+num=`grep '>' $file | wc -1'
+filename=`basename $file`
+
+echo $num $filename
+total=expr $total + $num`
+done
+
+echo $total
