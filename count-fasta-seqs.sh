@@ -1,5 +1,5 @@
 #!/bin/sh
-$PATH=$@
+
 # How this script should behave:
 #
 # INPUT:   Paths to one or more fasta sequence files
@@ -94,3 +94,4 @@ echo "$@"
 #
 # ADD YOUR CODE BELOW:
 
+$PATH = $@
