@@ -62,8 +62,9 @@
 # The first thing you need to be able to do is access the paths to the fasta
 # files that were 'given to' this script. The variable "$@" will be very useful
 # for this. Let's take a look at what it gives us:
-
-echo "$@"
+#@=$PATH
+echo "$@" 
+grep ">" "$@" | wc -l
 
 # How are you going to work with each file path?
 # HINT: for loop (remember "for do done"?)
