@@ -5,7 +5,7 @@
 for file in "$@"
 do
 
-    NUM=`grep '>' $file | wc -1'
+    NUM=`grep '>' $file | wc -l`
     filename=`basename $file`
 
     echo $NUM $filename
