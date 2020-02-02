@@ -12,4 +12,4 @@ do
 done
 
 TOTAL=`grep '>' $@ | wc -l`
-echo $total
+echo $TOTAL
