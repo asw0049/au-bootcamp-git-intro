@@ -70,7 +70,19 @@ done
 # The first thing you need to be able to do is access the paths to the fasta
 # files that were 'given to' this script. The variable "$@" will be very useful
 # for this. Let's take a look at what it gives us:
+<<<<<<< HEAD
 #
+=======
+<<<<<<< HEAD
+
+#echo "$@"
+=======
+#@=$PATH
+echo "$@" 
+grep ">" "$@" | wc -l
+>>>>>>> 7de99f0e2a1adc633819a31964b1a7fb4be15b6c
+
+>>>>>>> d0379421c1905278624859ea9aa27ed0545de17c
 # How are you going to work with each file path?
 # HINT: for loop (remember "for do done"?)
 #
@@ -100,3 +112,16 @@ done
 #
 # ADD YOUR CODE BELOW:
 
+total=0
+
+for file in "$@"
+do
+
+num=`grep '>' $file | wc -1'
+filename=`basename $file`
+
+echo $num $filename
+total=expr $total + $num`
+done
+
+echo $total
